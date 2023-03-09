@@ -9,7 +9,7 @@
 <h:body>
     <h:form id="guess_form">
         <p:outputLabel id="numberToGuess" value="#{guessBean.numberToGuess}" style="display: none;"/>
-        <p:inputText id="guess" value="#{guessBean.guess}"/>
+        <p:inputText id="guess" value="#{guessBean.attempNumber}"/>
         <p:outputLabel id="attempts" value="Intentos: #{guessBean.attempts}"/>
         <p:outputLabel id="gameState" value="#{guessBean.gameState}"/>
         <p:outputLabel id="prize" value="Premio: $#{guessBean.prize}"/>
