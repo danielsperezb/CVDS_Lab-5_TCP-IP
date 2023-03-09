@@ -1,15 +1,24 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <meta charset="UTF-8">
-    <title>Start Page</title>
-  </head>
-  <body>
-    <h1>Start Page</h1>
-    <form action="Start Page.php" method="POST">
-      <label for="nombre">Numero:</label>
-      <input type="text" id="number" name="numero"><br>
-
-    </form>
-  </body>
+<head>
+	<title>Start Page</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+	<script>
+		function validateForm() {
+			var x = document.forms["myForm"]["num"].value;
+			if (isNaN(x) || x == "") {
+				alert("El valor ingresado no es un número");
+				return false;
+			}
+		}
+	</script>
+</head>
+<body>
+	<h1>Hello World!</h1>
+	<form name="myForm" method="POST" action="./myServlet">
+		<label for="num">Ingrese un número:</label>
+		<input type="text" id="num" name="num"><br><br>
+		<input type="submit" value="Enviar" onclick="return validateForm()">
+	</form>
+</body>
 </html>
