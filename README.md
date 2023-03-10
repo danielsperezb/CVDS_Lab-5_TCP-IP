@@ -51,6 +51,24 @@ Recompile y ejecute la aplicación. Abra en su navegador en la página del formu
 
 a. Abra la aplicación en un explorador. Realice algunas pruebascon el juego e intente adivinar el número
 
-Para abrir la aplicacion se necesita ingresar a la URL a traves de <IP del computador>:8080/faces/guess.xhtml
-
 ![Prueba #1](https://tucatalogo.digital/img_cvds/prueba1.png)
+En este caso, gane al primer intento!
+
+b. Abra la aplicación en doscomputadores diferentes. Si no dispone de uno, hágalo en dos navegadores diferentes(por ejemplo Chrome y Firefox;
+incluso se puede en un único navegador usando una ventana normal y una ventana de incógnito / privada).Haga cinco intentos en uno, y luego
+un intento en el otro.¿Qué valor tiene cada uno?
+
+Para abrir la aplicacion se necesita ingresar a la URL a traves de IP del computador:8080/faces/guess.xhtml
+
+CHROME:
+
+![Prueba #1](https://tucatalogo.digital/img_cvds/prueba2a.png)
+Realizo 5 intentos
+
+FIREFOX:
+![Prueba #1](https://tucatalogo.digital/img_cvds/prueba2b.png)
+Realizo 1 intento.
+
+
+
+
