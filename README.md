@@ -95,6 +95,9 @@ AL HACERLO CON @SessionScoped
 
 Al abrirlo en distintas sesiones me funciona a la perfeccion, meintras que al hacerlo con @ApplicationScoped al enviar el numero, es como si se reinciara.
 La diferencia segun lo que hemos visto en la practica es la capacidad de mantener varias sesiones al tiempo, sin complicaciones en el funcionamiento de la pagina web.
+Crea distintas instancias del objeto probablemente.
+
+
 CHROME:
 
 ![Prueba #1](https://tucatalogo.digital/img_cvds/4.png)
@@ -132,9 +135,14 @@ Agregando cambios temporales se podria, agregar un fondo de color rojo:
 
 Pero asi como dice el laboratorio si se recarga la pagina esto se pierde.
 
-11. Para facilitar losintentos del usuario,se agregará una lista de los últimosintentosfallidosrealizados:
+11. Para facilitar los intentos del usuario,se agregará una lista de los últimos intentos fallidos realizados:
+
+
 a. Agregue en el Backing-Bean, una propiedad que contenga una lista de intentadosrealizados.
+
 b. Agregue cada intento a la lista,cuando se ejecute el método guess.
+
 c. Cuando se reinicie el juego, limpie elcontenido de la lista.
+
 d. Busque cómo agregar una tabla a la página,cuyo contenido sea los últimosintentosrealizado
 
