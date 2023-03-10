@@ -1,6 +1,10 @@
 # Compiled class file
 *.class
 
+#ECLIPSE
+*.classpath
+*.project
+
 # Log file
 *.log
 

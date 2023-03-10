@@ -52,7 +52,8 @@ Recompile y ejecute la aplicación. Abra en su navegador en la página del formu
 a. Abra la aplicación en un explorador. Realice algunas pruebascon el juego e intente adivinar el número
 
 ![Prueba #1](https://tucatalogo.digital/img_cvds/prueba1.png)
-En este caso, gane al primer intento!
+En este caso, gane al primer intento, DE PURA SUERTE!
+Y haciendo otras pruebas, me he dado cuenta que funciona correctamente.
 
 b. Abra la aplicación en doscomputadores diferentes. Si no dispone de uno, hágalo en dos navegadores diferentes(por ejemplo Chrome y Firefox;
 incluso se puede en un único navegador usando una ventana normal y una ventana de incógnito / privada).Haga cinco intentos en uno, y luego
@@ -60,15 +61,65 @@ un intento en el otro.¿Qué valor tiene cada uno?
 
 Para abrir la aplicacion se necesita ingresar a la URL a traves de IP del computador:8080/faces/guess.xhtml
 
+
+AL HACERLO CON @ApplicationScoped 
+
 CHROME:
 
-![Prueba #1](https://tucatalogo.digital/img_cvds/prueba2a.png)
+![Prueba #1](https://tucatalogo.digital/img_cvds/1.png)
+Hice 5 intentos, pero no cuenta, es como si se reinciara.
+
+FIREFOX:
+
+![Prueba #1](https://tucatalogo.digital/img_cvds/2.png)
+Pasa lo mismo, sin embargo, si le doy varias veces al boton enviar, por ejemplo pensando que el numero es 5,  y me sale correcto pero le vuelvo a dar y me sale incorrecto.
+
+
+c. Aborte el proceso de Tomcat-runner haciendo Ctrl+C en la consola, y modifique elcódigo del backing-bean de manera que use la anotación
+@SessionScoped en lugar de @ApplicationScoped. Reinicie la aplicación y repita el ejercicio anterior.
+¿Coinciden los valores del premio?.
+Dado la anterior,¿Cuál esla diferencia entre los backing-beans de sesión y los de aplicación?
+
+Abortamos el proceso:
+![Prueba #1](https://tucatalogo.digital/img_cvds/3.png)
+
+Y arrancamos de nuevo con @SessionScoped:
+![Prueba #1](https://tucatalogo.digital/img_cvds/6.png)
+
+AL HACERLO CON @SessionScoped 
+Al abrirlo en distintas sesiones me funciona a la perfeccion, meintras que al hacerlo con @ApplicationScoped al enviar el numero, es como si se reinciara.
+CHROME:
+
+![Prueba #1](https://tucatalogo.digital/img_cvds/4.png)
 Realizo 5 intentos
 
 FIREFOX:
-![Prueba #1](https://tucatalogo.digital/img_cvds/prueba2b.png)
+![Prueba #1](https://tucatalogo.digital/img_cvds/5.png)
 Realizo 1 intento.
 
+d. Por medio de las herramientas de desarrollador del explorador (Usando la tecla "F12" en la mayoría de exploradores):
+Ubique elcódigoHTML generado por elservidor.
+Busque el elemento oculto, que contiene el número generado aleatoriamente.
+En la sección de estilos, deshabilite el estilo que oculta el elemento para que sea visible.
+Observe elcambio en la página,cada vez que se realiza un cambio en el estilo.
+Revise qué otros estilosse pueden agregar a los diferentes elementos y qué efecto tienen en la visualización de la página. Actualice la
+página. Loscambios de estilosrealizados desaparecen, puesse realizaron únicamente en la visualización, la respuesta delservidor
+sigue siendo la misma, ya que elcontenido de los archivos allí almacenados no se ha modificado.
+Revise qué otroscambiosse pueden realizar y qué otra información se puede obtener de las herramientas de desarrollador.
 
 
+![Prueba #4](https://tucatalogo.digital/img_cvds/descubrir.png)
+
+Lo podemos ver al lado derecho y cada vez que reiniciamos el juego, el numero cambia permitiendonos ganar en el primer intento y ganando los $100,000:
+
+
+![Prueba #4](https://tucatalogo.digital/img_cvds/descubrir2.png)
+
+
+
+11. Para facilitar losintentos del usuario,se agregará una lista de los últimosintentosfallidosrealizados:
+a. Agregue en el Backing-Bean, una propiedad que contenga una lista de intentadosrealizados.
+b. Agregue cada intento a la lista,cuando se ejecute el método guess.
+c. Cuando se reinicie el juego, limpie elcontenido de la lista.
+d. Busque cómo agregar una tabla a la página,cuyo contenido sea los últimosintentosrealizado
 
