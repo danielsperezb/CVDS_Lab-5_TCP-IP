@@ -52,7 +52,9 @@ Recompile y ejecute la aplicación. Abra en su navegador en la página del formu
 a. Abra la aplicación en un explorador. Realice algunas pruebascon el juego e intente adivinar el número
 
 ![Prueba #1](https://tucatalogo.digital/img_cvds/prueba1.png)
+
 En este caso, gane al primer intento, DE PURA SUERTE!
+
 Y haciendo otras pruebas, me he dado cuenta que funciona correctamente.
 
 b. Abra la aplicación en doscomputadores diferentes. Si no dispone de uno, hágalo en dos navegadores diferentes(por ejemplo Chrome y Firefox;
@@ -67,6 +69,7 @@ AL HACERLO CON @ApplicationScoped
 CHROME:
 
 ![Prueba #1](https://tucatalogo.digital/img_cvds/1.png)
+
 Hice 5 intentos, pero no cuenta, es como si se reinciara.
 
 FIREFOX:
@@ -81,20 +84,27 @@ c. Aborte el proceso de Tomcat-runner haciendo Ctrl+C en la consola, y modifique
 Dado la anterior,¿Cuál esla diferencia entre los backing-beans de sesión y los de aplicación?
 
 Abortamos el proceso:
+
 ![Prueba #1](https://tucatalogo.digital/img_cvds/3.png)
 
 Y arrancamos de nuevo con @SessionScoped:
+
 ![Prueba #1](https://tucatalogo.digital/img_cvds/6.png)
 
 AL HACERLO CON @SessionScoped 
+
 Al abrirlo en distintas sesiones me funciona a la perfeccion, meintras que al hacerlo con @ApplicationScoped al enviar el numero, es como si se reinciara.
+La diferencia segun lo que hemos visto en la practica es la capacidad de mantener varias sesiones al tiempo, sin complicaciones en el funcionamiento de la pagina web.
 CHROME:
 
 ![Prueba #1](https://tucatalogo.digital/img_cvds/4.png)
+
 Realizo 5 intentos
 
 FIREFOX:
+
 ![Prueba #1](https://tucatalogo.digital/img_cvds/5.png)
+
 Realizo 1 intento.
 
 d. Por medio de las herramientas de desarrollador del explorador (Usando la tecla "F12" en la mayoría de exploradores):
@@ -116,6 +126,11 @@ Lo podemos ver al lado derecho y cada vez que reiniciamos el juego, el numero ca
 ![Prueba #4](https://tucatalogo.digital/img_cvds/descubrir2.png)
 
 
+Agregando cambios temporales se podria, agregar un fondo de color rojo:
+
+![Prueba #4](https://tucatalogo.digital/img_cvds/10.png)
+
+Pero asi como dice el laboratorio si se recarga la pagina esto se pierde.
 
 11. Para facilitar losintentos del usuario,se agregará una lista de los últimosintentosfallidosrealizados:
 a. Agregue en el Backing-Bean, una propiedad que contenga una lista de intentadosrealizados.
