@@ -3,23 +3,38 @@
       xmlns:h="http://java.sun.com/jsf/html"
       xmlns:p="http://primefaces.org/ui">
 
-<h:head>
-</h:head>
+<head>
+  <title>Adivina el número</title>
+</head>
 
-<h:body>
-    <h:form id="guess_form">
-        <p:outputLabel id="numberToGuess" value="#{guessBean.numberToGuess}" style="display: none;"/>
-        <p:inputText id="guess" value="#{guessBean.attempNumber}"/>
-        <p:outputLabel id="attempts" value="Intentos: #{guessBean.attempts}"/>
-        <p:outputLabel id="gameState" value="#{guessBean.gameState}"/>
-        <p:outputLabel id="prize" value="Premio: $#{guessBean.prize}"/>
+<body>
+  <h:form id="guess_form">
 
-        <p:commandButton id="submitGuess" value="Enviar" update="guess_form"
-                         actionListener="#{guessBean.guess}"/>
+    <p:outputLabel id="numberToGuess" value="#{guessBean.numberToGuess}" style="display: none;" />
+
+    <div class="input-group">
+      <p:inputText id="guess" value="#{guessBean.attempNumber}" class="form-control" placeholder="Ingresa tu número" />
+
+      <p:commandButton id="submitGuess" value="Enviar" update="guess_form"
+                       actionListener="#{guessBean.guess}" icon="pi pi-check" styleClass="btn btn-primary ml-2" />
+    </div>
+
+    <div class="mt-3">
+      <p:outputLabel id="attempts" value="Intentos: #{guessBean.attempts}" />
+      <br/>
+
+      <p:outputLabel id="gameState" value="#{guessBean.gameState}" class="ml-3" />
+
+      <div class="float-right">
+        <p:outputLabel id="prize" value="Conteo del Premio: $#{guessBean.prize}" />
+        <br/>
 
         <p:commandButton id="restartGame" value="Reiniciar" update="guess_form"
-                         actionListener="#{guessBean.restart}"/>
-    </h:form>
-</h:body>
+                         actionListener="#{guessBean.restart}" icon="pi pi-refresh" styleClass="btn btn-outline-secondary ml-2" />
+      </div>
+    </div>
+
+  </h:form>
+</body>
 
 </html>
