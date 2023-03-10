@@ -48,3 +48,9 @@ Recompile y ejecute la aplicación. Abra en su navegador en la página del formu
 ¿Qué se está viendo? Revise cómo están implementadoslos métodos de la clase Service.java para entender el funcionamiento interno.
 
 **PARTE IV. - JUGANDO A SER UN CLIENTE HTTP**
+
+a. Abra la aplicación en un explorador. Realice algunas pruebascon el juego e intente adivinar el número
+
+Para abrir la aplicacion se necesita ingresar a la URL a traves de <IP del computador>:8080/faces/guess.xhtml
+
+![Prueba #1](https://tucatalogo.digital/img_cvds/prueba1.png)
