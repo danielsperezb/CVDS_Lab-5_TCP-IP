@@ -67,7 +67,7 @@ public class GuessBean implements Serializable {
         attempts++;
         lista.add(attempNumber);
         if (attempNumber == numberToGuess) {
-            gameState = "¡Felicidades, ganaste " + prize + "!";
+            gameState = "¡Felicidades, ganaste " + prize + "!!!";
         }
         int newprize = getPrize() - 10000;
         setPrize(newprize);
