@@ -1,40 +1,84 @@
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml"
       xmlns:h="http://java.sun.com/jsf/html"
+      xmlns:f="http://xmlns.jcp.org/jsf/core"
       xmlns:p="http://primefaces.org/ui">
 
 <head>
-  <title>Adivina el número</title>
+  <title>JUEGO PEREZ TERAN - ADIVINA EL NUMERO</title>
+  <style>
+    body {
+      text-align: center;
+    }
+    .input-group {
+      display: flex;
+      justify-content: center;
+    }
+    .form-control {
+      margin-right: 5px;
+    }
+    .mt-3 {
+      display: flex;
+      justify-content: center;
+      margin-top: 20px;
+    }
+    .float-right {
+      float: right;
+    }
+    .ml-2 {
+      margin-left: 10px;
+    }
+    .ml-3 {
+      margin-left: 20px;
+    }
+    .btn-outline-secondary {
+      color: #6c757d;
+      border-color: #6c757d;
+    }
+    table {
+      margin: auto;
+    }
+  </style>
 </head>
 
 <body>
-  <h:form id="guess_form">
+<h:form id="guess_form">
 
-    <p:outputLabel id="numberToGuess" value="#{guessBean.numberToGuess}" style="display: none;" />
+  <p:outputLabel id="numberToGuess" value="#{guessBean.numberToGuess}" style="display: none;" />
 
-    <div class="input-group">
-      <p:inputText id="guess" value="#{guessBean.attempNumber}" class="form-control" placeholder="Ingresa tu número" />
+  <div class="input-group">
+    <p:inputText id="guess" value="#{guessBean.attempNumber}" class="form-control" placeholder="Ingresa tu número" />
 
-      <p:commandButton id="submitGuess" value="Enviar" update="guess_form"
-                       actionListener="#{guessBean.guess}" icon="pi pi-check" styleClass="btn btn-primary ml-2" />
-    </div>
+    <p:commandButton id="submitGuess" value="Enviar" update="guess_form"
+                     actionListener="#{guessBean.guess}" icon="pi pi-check" styleClass="btn btn-primary ml-2" />
+  </div>
 
-    <div class="mt-3">
-      <p:outputLabel id="attempts" value="Intentos: #{guessBean.attempts}" />
+  <div class="mt-3">
+    <p:outputLabel id="attempts" value="Intentos: #{guessBean.attempts}" />
+    <br/>
+
+    <p:outputLabel id="gameState" value="#{guessBean.gameState}" class="ml-3" />
+
+    <div class="float-right">
+      <p:outputLabel id="prize" value="Conteo del Premio: $#{guessBean.prize}" />
       <br/>
 
-      <p:outputLabel id="gameState" value="#{guessBean.gameState}" class="ml-3" />
-
-      <div class="float-right">
-        <p:outputLabel id="prize" value="Conteo del Premio: $#{guessBean.prize}" />
-        <br/>
-
-        <p:commandButton id="restartGame" value="Reiniciar" update="guess_form"
-                         actionListener="#{guessBean.restart}" icon="pi pi-refresh" styleClass="btn btn-outline-secondary ml-2" />
-      </div>
+      <p:commandButton id="restartGame" value="Reiniciar" update="guess_form"
+                       actionListener="#{guessBean.restart}" icon="pi pi-refresh" styleClass="btn btn-outline-secondary ml-2" />
     </div>
+  </div>
 
-  </h:form>
+
+  <br/>
+  <div>
+    <p:dataTable var="lista" value="#{guessBean.lista}">
+      <p:column headerText="Intentos">
+        <h:outputText value="#{lista}" />
+      </p:column>
+    </p:dataTable>
+  </div>
+
+</h:form>
 </body>
 
 </html>
