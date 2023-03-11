@@ -168,4 +168,4 @@ Y agregamos al .gitignore
 
 ----------------------------------------------------------------
 
-En una carpeta en la raiz del repositorio llamada diagrams y allí realizar un diagrama de clases del proyecto.
+En una carpeta en la raiz del repositorio llamada diagrams y allí realizar un diagrama de clases del proyecto
