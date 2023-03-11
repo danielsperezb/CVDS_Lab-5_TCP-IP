@@ -146,3 +146,26 @@ c. Cuando se reinicie el juego, limpie elcontenido de la lista.
 
 d. Busque cómo agregar una tabla a la página,cuyo contenido sea los últimosintentosrealizado
 
+![Prueba #4](https://tucatalogo.digital/img_cvds/20.png)
+
+Haciendo varios intentos:
+
+![Prueba #4](https://tucatalogo.digital/img_cvds/22.png)
+
+------------------------------------------------------------------
+
+**Configurar el archivo .gitignore para excluir del repositorio los archivos no relevantes**
+
+Puede que sea necesario:
+
+git rm --cached .project
+
+git rm --cached .classpath
+
+Y agregamos al .gitignore
+
+![Prueba #4](https://tucatalogo.digital/img_cvds/21.png)
+
+----------------------------------------------------------------
+
+En una carpeta en la raiz del repositorio llamada diagrams y allí realizar un diagrama de clases del proyecto.
